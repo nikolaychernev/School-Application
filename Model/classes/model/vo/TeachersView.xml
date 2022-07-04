@@ -48,6 +48,8 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="15"/>
+        <LABEL
+          ResId="model.vo.TeachersView.TeacherId_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -61,6 +63,8 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="15"/>
+        <LABEL
+          ResId="model.vo.TeachersView.TeacherName_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -74,6 +78,8 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="15"/>
+        <LABEL
+          ResId="model.vo.TeachersView.TeacherPhone_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -87,6 +93,8 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="15"/>
+        <LABEL
+          ResId="model.vo.TeachersView.TeacherAddress_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -100,6 +108,10 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="15"/>
+        <LABEL
+          ResId="model.vo.TeachersView.TeacherDateOfBirth_LABEL"/>
+        <CONTROLTYPE
+          Value="date"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -116,6 +128,8 @@
           Value="combo"/>
         <DISPLAYWIDTH
           Value="15"/>
+        <LABEL
+          ResId="model.vo.TeachersView.TeacherGendar_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -150,42 +164,36 @@
         ViewAttribute="TeacherId"
         Operator="="
         Conjunction="AND"
-        Value=""
         Required="Optional"/>
       <ViewCriteriaItem
         Name="TeacherName"
         ViewAttribute="TeacherName"
         Operator="CONTAINS"
         Conjunction="AND"
-        Value=""
         Required="Optional"/>
       <ViewCriteriaItem
         Name="TeacherPhone"
         ViewAttribute="TeacherPhone"
         Operator="STARTSWITH"
         Conjunction="AND"
-        Value=""
         Required="Optional"/>
       <ViewCriteriaItem
         Name="TeachersViewCriteria_TeachersViewCriteria_row_0_TeacherAddress"
         ViewAttribute="TeacherAddress"
         Operator="CONTAINS"
         Conjunction="AND"
-        Value=""
         Required="Optional"/>
       <ViewCriteriaItem
         Name="TeacherDateOfBirth"
         ViewAttribute="TeacherDateOfBirth"
         Operator="="
         Conjunction="AND"
-        Value=""
         Required="Optional"/>
       <ViewCriteriaItem
         Name="TeacherGendar"
         ViewAttribute="TeacherGendar"
         Operator="="
         Conjunction="AND"
-        Value=""
         Required="Optional"/>
     </ViewCriteriaRow>
   </ViewCriteria>
@@ -194,4 +202,8 @@
     ViewLink="model.vo.TeacherLinkClasses"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

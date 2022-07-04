@@ -3,9 +3,11 @@
              SeparateXMLFiles="false" Package="view" ClientType="Generic">
   <pageMap>
     <page path="/classrooms.jsf" usageId="view_classroomsPageDef"/>
+    <page path="/teachers.jsf" usageId="view_teachersPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_classroomsPageDef" path="view.pageDefs.classroomsPageDef"/>
+    <page id="view_teachersPageDef" path="view.pageDefs.teachersPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.eo"
