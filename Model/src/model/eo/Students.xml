@@ -168,6 +168,17 @@
     </Properties>
   </Attribute>
   <Key
+    Name="AltKey"
+    AltKey="true">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="STUDENTS"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.Students.StudentName"/>
+    </AttrArray>
+  </Key>
+  <Key
     Name="StudentsPk"
     PrimaryKey="true">
     <DesignTime>
