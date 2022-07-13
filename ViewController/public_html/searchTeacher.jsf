@@ -7,14 +7,12 @@
             <af:pageTemplate viewId="/schoolTemplateDef.jsf" id="pt1">
                 <f:facet name="body">
                     <af:panelGroupLayout layout="vertical" id="pgl1">
-                        <af:panelHeader text="Teachers" id="ph1">
-                            <af:query id="qryId1" headerText="Search" disclosed="true"
-                                      value="#{bindings.SearchTeachersViewCriteriaQuery.queryDescriptor}"
-                                      model="#{bindings.SearchTeachersViewCriteriaQuery.queryModel}"
-                                      queryListener="#{bindings.SearchTeachersViewCriteriaQuery.processQuery}"
-                                      queryOperationListener="#{bindings.SearchTeachersViewCriteriaQuery.processQueryOperation}"
-                                      resultComponentId="::pc1:resId1" rows="2" maxColumns="3" saveQueryMode="hidden"/>
-                        </af:panelHeader>
+                        <af:query id="qryId1" headerText="Search Teachers" disclosed="true"
+                                  value="#{bindings.SearchTeachersViewCriteriaQuery.queryDescriptor}"
+                                  model="#{bindings.SearchTeachersViewCriteriaQuery.queryModel}"
+                                  queryListener="#{bindings.SearchTeachersViewCriteriaQuery.processQuery}"
+                                  queryOperationListener="#{bindings.SearchTeachersViewCriteriaQuery.processQueryOperation}"
+                                  resultComponentId="::pc1:resId1" rows="2" maxColumns="3" saveQueryMode="hidden"/>
                         <af:panelCollection id="pc1" styleClass="AFStretchWidth">
                             <f:facet name="menus"/>
                             <f:facet name="toolbar">
