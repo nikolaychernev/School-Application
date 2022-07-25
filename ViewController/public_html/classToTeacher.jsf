@@ -6,10 +6,10 @@
         <af:form id="f1">
             <af:pageTemplate viewId="/schoolTemplateDef.jsf" id="pt1">
                 <f:facet name="body">
-                    <af:panelGroupLayout id="pgl1" layout="horizontal" halign="center">
+                    <af:panelGroupLayout id="pgl1" layout="horizontal" halign="center" valign="top">
                         <af:panelBox text="Teacher" id="pb1" showMaximize="always" showDisclosure="false">
                             <f:facet name="toolbar"/>
-                            <af:panelCollection id="pc1" inlineStyle="width:650px;">
+                            <af:panelCollection id="pc1" inlineStyle="width:650px; height:550px;">
                                 <f:facet name="menus"/>
                                 <f:facet name="toolbar"/>
                                 <f:facet name="statusbar"/>
@@ -27,7 +27,8 @@
                                           inlineStyle="width:650px;">
                                     <af:column sortProperty="#{bindings.TeachersView1.hints.TeacherId.name}"
                                                filterable="true" sortable="true"
-                                               headerText="#{bindings.TeachersView1.hints.TeacherId.label}" id="c1">
+                                               headerText="#{bindings.TeachersView1.hints.TeacherId.label}" id="c1"
+                                               width="70">
                                         <af:outputText value="#{row.TeacherId}"
                                                        shortDesc="#{bindings.TeachersView1.hints.TeacherId.tooltip}"
                                                        id="ot1">
@@ -75,7 +76,8 @@
                                     </af:column>
                                     <af:column sortProperty="#{bindings.TeachersView1.hints.TeacherGendar.name}"
                                                filterable="true" sortable="true"
-                                               headerText="#{bindings.TeachersView1.hints.TeacherGendar.label}" id="c6">
+                                               headerText="#{bindings.TeachersView1.hints.TeacherGendar.label}" id="c6"
+                                               width="80">
                                         <af:selectOneChoice value="#{row.bindings.TeacherGendar.inputValue}"
                                                             label="#{row.bindings.TeacherGendar.label}"
                                                             required="#{bindings.TeachersView1.hints.TeacherGendar.mandatory}"
@@ -91,7 +93,7 @@
                         <af:spacer width="30" height="10" id="s1"/>
                         <af:panelBox text="Teacher Classes" id="pb2" showMaximize="always" showDisclosure="false">
                             <f:facet name="toolbar"/>
-                            <af:panelCollection id="pc2">
+                            <af:panelCollection id="pc2" inlineStyle="height:550px;">
                                 <f:facet name="menus"/>
                                 <f:facet name="toolbar"/>
                                 <f:facet name="statusbar"/>
@@ -122,7 +124,7 @@
                                           filterVisible="true"
                                           queryListener="#{bindings.TeacherClassesView2Query.processQuery}"
                                           varStatus="vs" id="t2" partialTriggers="::b1 ::b2" columnStretching="last"
-                                          inlineStyle="width:350px;">
+                                          inlineStyle="width:550px;">
                                     <af:column sortProperty="#{bindings.TeacherClassesView2.hints.TeacherFk.name}"
                                                filterable="true" sortable="true"
                                                headerText="#{bindings.TeacherClassesView2.hints.TeacherFk.label}"
