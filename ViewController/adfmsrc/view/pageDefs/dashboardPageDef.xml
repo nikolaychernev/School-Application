@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="dashboardPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="RONumberOfStudentInClassView1" RangeSize="-1" DataControl="AppModuleDataControl"
+              id="RONumberOfStudentInClassView1Iterator"/>
+    <iterator Binds="ROTeachersInClassroomView1" RangeSize="-1" DataControl="AppModuleDataControl"
+              id="ROTeachersInClassroomView1Iterator"/>
+    <iterator Binds="ROAvgPassStudentsView2" RangeSize="1" DataControl="AppModuleDataControl"
+              id="ROAvgPassStudentsView2Iterator"/>
+    <iterator Binds="ROStudentInGradeView1" RangeSize="-1" DataControl="AppModuleDataControl"
+              id="ROStudentInGradeView1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="RONumberOfStudentInClassView1Iterator" id="RONumberOfStudentInClassView1"
+          ChangeEventPolicy="ppr">
+      <nodeDefinition DefName="model.ro.RONumberOfStudentInClassView" Name="RONumberOfStudentInClassView1">
+        <AttrNames>
+          <Item Value="ClassroomFk"/>
+          <Item Value="Selectobjects0"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="ROTeachersInClassroomView1Iterator" id="ROTeachersInClassroomView1" ChangeEventPolicy="ppr">
+      <nodeDefinition DefName="model.ro.ROTeachersInClassroomView" Name="ROTeachersInClassroomView1">
+        <AttrNames>
+          <Item Value="Selectobjects0"/>
+          <Item Value="ClassroomFk"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="ROAvgPassStudentsView2Iterator" id="AsAvgPass">
+      <AttrNames>
+        <Item Value="AsAvgPass"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="ROStudentInGradeView1Iterator" id="ROStudentInGradeView1" ChangeEventPolicy="ppr">
+      <nodeDefinition DefName="model.ro.ROStudentInGradeView" Name="ROStudentInGradeView1">
+        <AttrNames>
+          <Item Value="Selectobjects0"/>
+          <Item Value="GradeNumber"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

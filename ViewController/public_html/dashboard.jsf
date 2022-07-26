@@ -1,10 +1,67 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
-<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
     <af:document title="School || Dashboard" id="d1">
+        <af:messages id="m1"/>
         <af:form id="f1">
             <af:pageTemplate viewId="/schoolTemplateDef.jsf" id="pt1">
-                <f:facet name="body"/>
+                <f:facet name="body">
+                    <af:panelSplitter id="ps1" splitterPosition="300">
+                        <f:facet name="first">
+                            <af:panelGroupLayout id="pgl1"/>
+                        </f:facet>
+                        <f:facet name="second">
+                            <af:panelDashboard id="pd1" columns="2" rowHeight="50%">
+                                <af:panelBox text="Students in Classroom" id="pb4" showMaximize="always">
+                                    <f:facet name="toolbar"/>
+                                    <dvt:barChart id="barChart1" var="row"
+                                                  value="#{bindings.RONumberOfStudentInClassView1.collectionModel}"
+                                                  styleClass="AFStretchWidth">
+                                        <dvt:chartLegend rendered="false" id="cl1"/>
+                                        <f:facet name="dataStamp">
+                                            <dvt:chartDataItem id="di1" series="#{row.Selectobjects0}"
+                                                               value="#{row.ClassroomFk}"
+                                                               group="#{bindings.RONumberOfStudentInClassView1.hints.ClassroomFk.label}"/>
+                                        </f:facet>
+                                    </dvt:barChart>
+                                </af:panelBox>
+                                <af:panelBox text="Teachers in Classroom" id="pb3" showMaximize="always">
+                                    <f:facet name="toolbar"/>
+                                    <dvt:pieChart id="pieChart1" var="row"
+                                                  value="#{bindings.ROTeachersInClassroomView1.collectionModel}"
+                                                  styleClass="AFStretchWidth">
+                                        <dvt:chartLegend id="cl2"/>
+                                        <dvt:pieDataItem id="di2" label="#{row.ClassroomFk}"
+                                                         value="#{row.Selectobjects0}"/>
+                                    </dvt:pieChart>
+                                </af:panelBox>
+                                <af:panelBox text="Avg. Pass Students Last Year" id="pb2" showMaximize="always">
+                                    <f:facet name="toolbar"/>
+                                    <dvt:dialGauge id="dialGauge1" maximum="100"
+                                                   value="#{bindings.AsAvgPass.inputValue}" minimum="0"
+                                                   styleClass="AFStretchWidth">
+                                        <dvt:gaugeMetricLabel rendered="true" id="gml1"/>
+                                    </dvt:dialGauge>
+                                </af:panelBox>
+                                <af:panelBox text="Students in Grade Number" id="pb1" showMaximize="always">
+                                    <f:facet name="toolbar"/>
+                                    <dvt:lineChart id="lineChart1" var="row"
+                                                   value="#{bindings.ROStudentInGradeView1.collectionModel}"
+                                                   styleClass="AFStretchWidth">
+                                        <dvt:chartLegend rendered="false" id="cl3"/>
+                                        <f:facet name="dataStamp">
+                                            <dvt:chartDataItem id="di3"
+                                                               series="#{bindings.ROStudentInGradeView1.hints.Selectobjects0.label}"
+                                                               value="#{row.Selectobjects0}"
+                                                               group="#{row.GradeNumber}"/>
+                                        </f:facet>
+                                    </dvt:lineChart>
+                                </af:panelBox>
+                            </af:panelDashboard>
+                        </f:facet>
+                    </af:panelSplitter>
+                </f:facet>
                 <f:attribute name="pageTitle" value="Dashboard"/>
             </af:pageTemplate>
         </af:form>
