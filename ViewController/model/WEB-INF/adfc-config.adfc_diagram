@@ -154,7 +154,7 @@
       <property
          name="fromOutcome">searchStudent</property>
       <property
-         name="sdm:polyPoints">L55,837.81665,511.5459,402.0,246.14355,B50</property>
+         name="sdm:polyPoints">L55,837.81445,511.5459,402.0,245.44238,B50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -164,7 +164,7 @@
       <property
          name="fromOutcome">dashboard</property>
       <property
-         name="sdm:polyPoints">L45,840.0,504.5459,512.0,248.49414,B50</property>
+         name="sdm:polyPoints">L45,840.0,504.5459,512.0,248.14355,B50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -174,7 +174,7 @@
       <property
          name="fromOutcome">searchTeacher</property>
       <property
-         name="sdm:polyPoints">T36,869.0,465.5459,633.0,250.84473,B50</property>
+         name="sdm:polyPoints">T23,862.0,465.5459,633.0,250.84473,B50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -184,7 +184,7 @@
       <property
          name="fromOutcome">teacher</property>
       <property
-         name="sdm:polyPoints">T50,876.0,462.74805,749.0,248.5459,B50</property>
+         name="sdm:polyPoints">T36,869.0,463.12637,749.0,248.5459,B50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -194,7 +194,7 @@
       <property
          name="fromOutcome">students</property>
       <property
-         name="sdm:polyPoints">T64,883.0,461.89133,857.0,248.84473,B50</property>
+         name="sdm:polyPoints">T50,876.0,462.06995,857.0,248.84473,B50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -204,7 +204,7 @@
       <property
          name="fromOutcome">studentResults</property>
       <property
-         name="sdm:polyPoints">T71,886.5,465.5459,977.0,250.84473,B50</property>
+         name="sdm:polyPoints">T64,883.0,463.445,977.0,250.84473,B50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -224,7 +224,7 @@
       <property
          name="fromOutcome">studentToClass</property>
       <property
-         name="sdm:polyPoints">R50,912.0,508.0459,1195.0,245.84473,B50</property>
+         name="sdm:polyPoints">R45,912.0,504.5459,1195.0,245.84473,B50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -235,5 +235,30 @@
          name="fromOutcome">classrooms</property>
       <property
          name="sdm:polyPoints">R55,914.4731,511.5459,1293.0,241.5459,B50</property>
+   </ControlFlowCase>
+   <View
+      id="View21">
+      <property
+         name="activityId">index</property>
+      <property
+         name="x">479.5</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>index&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">743.7988</property>
+      <property
+         name="page">/index.jspx</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase22"
+      from="WildcardControlFlowRule11"
+      to="View21">
+      <property
+         name="fromOutcome">index</property>
+      <property
+         name="sdm:polyPoints">L61,840.0,515.0459,520.5,743.44824,R50</property>
    </ControlFlowCase>
 </SDM>
