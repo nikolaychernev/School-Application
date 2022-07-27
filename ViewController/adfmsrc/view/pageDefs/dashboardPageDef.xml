@@ -12,6 +12,8 @@
               id="ROAvgPassStudentsView2Iterator"/>
     <iterator Binds="ROStudentInGradeView1" RangeSize="-1" DataControl="AppModuleDataControl"
               id="ROStudentInGradeView1Iterator"/>
+    <iterator Binds="RODashboardStatisticsView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="RODashboardStatisticsView1Iterator"/>
   </executables>
   <bindings>
     <tree IterBinding="RONumberOfStudentInClassView1Iterator" id="RONumberOfStudentInClassView1"
@@ -44,5 +46,60 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <attributeValues IterBinding="RODashboardStatisticsView1Iterator" id="NumberOfStudents">
+      <AttrNames>
+        <Item Value="NumberOfStudents"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RODashboardStatisticsView1Iterator" id="NumberOfClasses">
+      <AttrNames>
+        <Item Value="NumberOfClasses"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RODashboardStatisticsView1Iterator" id="NumberOfTeachers">
+      <AttrNames>
+        <Item Value="NumberOfTeachers"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RODashboardStatisticsView1Iterator" id="NumberClassesGrade1">
+      <AttrNames>
+        <Item Value="NumberClassesGrade1"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RODashboardStatisticsView1Iterator" id="NumberClassesGrade2">
+      <AttrNames>
+        <Item Value="NumberClassesGrade2"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RODashboardStatisticsView1Iterator" id="NumberClassesGrade3">
+      <AttrNames>
+        <Item Value="NumberClassesGrade3"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RODashboardStatisticsView1Iterator" id="NumberClassesGrade4">
+      <AttrNames>
+        <Item Value="NumberClassesGrade4"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RODashboardStatisticsView1Iterator" id="NumberClassesGrade5">
+      <AttrNames>
+        <Item Value="NumberClassesGrade5"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RODashboardStatisticsView1Iterator" id="NumberClassesGrade6">
+      <AttrNames>
+        <Item Value="NumberClassesGrade6"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RODashboardStatisticsView1Iterator" id="FailStudents">
+      <AttrNames>
+        <Item Value="FailStudents"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="RODashboardStatisticsView1Iterator" id="PassStudents">
+      <AttrNames>
+        <Item Value="PassStudents"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>
