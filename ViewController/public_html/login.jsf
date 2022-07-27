@@ -39,10 +39,12 @@
                                     <af:spacer width="500" height="10" id="s7"/>
                                     <af:panelFormLayout id="pfl1">
                                         <f:facet name="footer">
-                                            <af:button text="Login" id="b1"/>
+                                            <af:button text="Login" id="b1" action="#{login.loginAction}"/>
                                         </f:facet>
-                                        <af:inputText label="Username" id="it2"/>
-                                        <af:inputText label="Password" id="it1"/>
+                                        <af:inputText label="Username" id="it2" required="true"
+                                                      binding="#{login.usernameInputText}"/>
+                                        <af:inputText label="Password" id="it1" required="true" secret="true"
+                                                      binding="#{login.passwordInputText}"/>
                                     </af:panelFormLayout>
                                 </af:panelGroupLayout>
                             </af:panelGroupLayout>
