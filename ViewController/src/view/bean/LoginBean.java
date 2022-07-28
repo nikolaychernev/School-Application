@@ -5,6 +5,10 @@ import java.sql.PreparedStatement;
 
 import java.sql.ResultSet;
 
+import javax.faces.context.FacesContext;
+
+import javax.servlet.http.HttpSession;
+
 import oracle.adf.view.rich.component.rich.input.RichInputText;
 
 import view.common.MyADFUtil;
@@ -59,5 +63,20 @@ public class LoginBean {
 
         MyADFUtil.showErrorMessage("Invalid username or password");
         return null;
+    }
+
+    public String logoutAction() {
+        try {
+            FacesContext context = FacesContext.getCurrentInstance();
+            HttpSession session = (HttpSession) context.getExternalContext().getSession(true);
+
+            if (session != null) {
+                session.invalidate();
+            }
+        } catch (Exception e) {
+            System.err.println("error in logout -- " + e);
+        }
+
+        return "index";
     }
 }
